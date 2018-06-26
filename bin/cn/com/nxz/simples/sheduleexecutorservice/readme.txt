@@ -1,0 +1,3 @@
+定时器，单元，用sheduleExecutor代替timer方法，有很多优点；
+timer的内部只有一个线程，如果有多个任务的话就会顺序执行，这样我们的延迟时间和循环时间就会出现问题。
+ScheduledExecutorService是线程池，所以就不会出现这个情况，在对延迟任务和循环任务要求严格的时候，就需要考虑使用ScheduledExecutorService了。
